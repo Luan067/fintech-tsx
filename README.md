@@ -1,73 +1,59 @@
-# React + TypeScript + Vite
+# 💰 Fintech Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Dashboard financeiro desenvolvido em **React + TypeScript**, com foco em visualização de vendas, filtros por período e navegação por rotas dinâmicas.
 
-Currently, two official plugins are available:
+O projeto consome uma API externa para exibir dados financeiros e apresenta métricas resumidas e gráficos interativos.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## • Projeto online •
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+http://fintech-tsx.vercel.app/
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 Tecnologias Utilizadas
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **React**
+- **TypeScript**
+- **Vite**
+- **React Router DOM**
+- **Context API**
+- **Custom Hooks**
+- **Recharts**
+- **CSS puro (responsivo)**
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 📊 Funcionalidades
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- Filtro de vendas por intervalo de datas
+- Gráfico de vendas por status (pago, processando, falha)
+- Listagem de vendas
+- Página de detalhes da venda com rota dinâmica
+- Carregamento assíncrono com feedback visual
+- Gerenciamento de estado global com Context API
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 💻 Como rodar o projeto localmente
+
+### Pré-requisitos
+
+- Node.js 18+
+- Git
+
+### Passo a passo
+
+```bash
+# Clone o repositório
+git clone https://github.com/Luan067/fintech-tsx.git
+
+# Acesse a pasta
+cd fintech-tsx
+
+# Instale as dependências
+npm install
+
+# Rode em modo desenvolvimento
+npm run dev
