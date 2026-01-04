@@ -17,12 +17,14 @@ const labelStyle: React.CSSProperties = {
   marginBottom: "var(--gap-1)",
   fontWeight: "600",
   ...generalStyle,
+  padding: "8px",
 };
 
 const inputStyle: React.CSSProperties = {
   border: "none",
   fontFamily: "monospace",
   ...generalStyle,
+  padding: "8px",
 };
 
 const DateInput = ({ label, ...props }: IDateInput) => {
