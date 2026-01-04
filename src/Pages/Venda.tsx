@@ -11,7 +11,7 @@ const Venda = () => {
   const { data, loading } = useFetch<vendaSemdata>(`https://data.origamid.dev/vendas/${id}`);
 
   if (loading) return <Loading />;
-  if (!data) return;
+  if (!data) return null;
   return (
     <div>
       <div className="box mb">ID: {data.id}</div>

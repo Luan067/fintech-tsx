@@ -9,7 +9,7 @@ interface FetchState<T> {
 const useFetch = <T,>(URL: RequestInfo | URL, options?: RequestInit): FetchState<T> => {
   const [data, setData] = React.useState<T | null>(null);
   const [loading, setLoading] = React.useState(false);
-  const [error, setError] = React.useState<string | null>("");
+  const [error, setError] = React.useState<string | null>(null);
 
   const optionsRef = React.useRef(options);
   optionsRef.current = options;
